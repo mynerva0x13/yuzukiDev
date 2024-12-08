@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'cheeck-rabits';
+    src: url('/fonts/Cheeky Rabbit.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    margin: 0; /* Prevents margin that may affect the display */
+    height: 100%; /* Ensures full-height for the background */
+}
+
+html {
+    background: rgb(34, 105, 120); /* Fallback solid color */
+    background: linear-gradient(0deg, rgba(34, 105, 120, 1) 0%, rgba(186, 186, 186, 1) 73%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Prevents the gradient from repeating */
+    background-attachment: fixed; /* Fixes the background when scrolling */
+}
+
+
+.cheeck-rabits {
+  font-family: 'cheeck-rabits', sans-serif;
+}
+.scraper {
+    position: fixed;
+    left: 0; /* Start at 0 to align with the viewport */
+    height: 500px;
+    width: 100% !important; 
+    background-image: url('/image/eeuo_0n2a_230116-removebg-preview.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%; /* Ensure the background covers the height */
+    background-position: 0px 10px; /* Initial position */
+}
+
+.scraper1 {
+    opacity: 0; /* Initially hidden */
+    z-index: -1;
+    
+    bottom: -100px;
+    animation: fade-in 1s ease-out forwards, smooth-marquee1 30s linear infinite 1s;
+}
+
+.scraper2 {
+    opacity: 0; /* Initially hidden */
+    bottom: -20px;
+    z-index: -3;
+    /* margin-left: 80px; */
+    filter: brightness(45%);
+    animation: fade-in 1.5s ease-out forwards, smooth-marquee2 40s linear infinite 1.5s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes smooth-marquee1 {
+    0% {
+        background-position: 0px 10px;
+    }
+    100% {
+        background-position: -100% 10px; /* Ensure smooth transition */
+    }
+}
+
+@keyframes smooth-marquee2 {
+    0% {
+        background-position: 0px 10px;
+    }
+    100% {
+        background-position: -100% 10px; /* Ensure smooth transition */
+    }
+}
