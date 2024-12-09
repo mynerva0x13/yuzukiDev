@@ -3,9 +3,10 @@ import Konva from "./components/konva.tsx"
 export default function Main() {
     return (
         <>
-        <div className="container mx-auto w-50 flex flex-col items-center pt-8 backdrop-blur-sm bg-white/10 z-50">
+        <div className=" mx-auto w-[90vw] flex flex-col items-center pt-8 backdrop-blur-sm bg-white/10 z-50">
+            
             <Intro />
-            <Konva />
+             <Konva /> 
         </div>
         </>
     )

@@ -11,7 +11,6 @@
 html, body {
     margin: 0; /* Prevents margin that may affect the display */
     height: 100%; /* Ensures full-height for the background */
-    zoom: 90%; /* or 0.8 */
 }
 
 html {
@@ -22,7 +21,9 @@ html {
     background-size: cover; /* Prevents the gradient from repeating */
     background-attachment: fixed; /* Fixes the background when scrolling */
 }
-
+body {
+    /* @apply scale-100 md:scale-90 sm:scale-80 transition-transform bg-gray-100 text-gray-800 font-sans; */
+}
 
 .cheeck-rabits {
   font-family: 'cheeck-rabits', sans-serif;
@@ -54,7 +55,10 @@ html {
     filter: brightness(45%);
     animation: fade-in 1.5s ease-out forwards, smooth-marquee2 40s linear infinite 1.5s;
 }
-
+#container {
+    overflow: hidden;
+    position: relative;
+  }
 @keyframes fade-in {
     0% {
         opacity: 0;

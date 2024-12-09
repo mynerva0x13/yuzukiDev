@@ -1,6 +1,6 @@
 const container = document.getElementById('container'); // Your container div
-const containerWidth = container.offsetWidth;
-const containerHeight = container.offsetHeight - 25;
+const containerWidth = container.offsetWidth; // Get the container's width
+const containerHeight = container.offsetHeight; // Get the container's height and adjust
 
 // Initialize the Konva stage with the container's size
 const stage = new Konva.Stage({
@@ -16,7 +16,7 @@ stage.add(layer);
 var canvas2 = document.createElement('canvas');
 canvas2.width = stage.width();
 canvas2.height = stage.height();
-
+canvas2.className="flex"
 // created canvas2 we can add to layer as "Konva.Image" element
 var image = new Konva.Image({
   image: canvas2,
@@ -77,23 +77,23 @@ stage.on('mousemove touchmove', function () {
   layer.batchDraw();
 });
 
-var select = document.getElementById('tool');
-select.addEventListener('change', function () {
-  mode = select.value;
-});
+// var select = document.getElementById('tool');
+// select.addEventListener('change', function () {
+//   mode = select.value;
+// });
 
-// Change color based on input color picker
-document.getElementById('color').addEventListener('input', function () {
-  context.strokeStyle = this.value;
-});
+// // Change color based on input color picker
+// document.getElementById('color').addEventListener('input', function () {
+//   context.strokeStyle = this.value;
+// });
 
-// Change line width based on input number
-document.getElementById('linewidth').addEventListener('input', function () {
-  context.lineWidth = parseInt(this.value, 10);
-});
+// // Change line width based on input number
+// document.getElementById('linewidth').addEventListener('input', function () {
+//   context.lineWidth = parseInt(this.value, 10);
+// });
 
-// Reset the canvas drawing
-document.getElementById('reset').addEventListener('click', function () {
-  context.clearRect(0, 0, canvas2.width, canvas2.height); // Clear the drawing area
-  layer.batchDraw(); // Redraw the layer
-});
+// // Reset the canvas drawing
+// document.getElementById('reset').addEventListener('click', function () {
+//   context.clearRect(0, 0, canvas2.width, canvas2.height); // Clear the drawing area
+//   layer.batchDraw(); // Redraw the layer
+// });
