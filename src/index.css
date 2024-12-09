@@ -20,6 +20,8 @@ html {
     background-position: center;
     background-size: cover; /* Prevents the gradient from repeating */
     background-attachment: fixed; /* Fixes the background when scrolling */
+    
+  font-family: 'cheeck-rabits', sans-serif;
 }
 body {
     /* @apply scale-100 md:scale-90 sm:scale-80 transition-transform bg-gray-100 text-gray-800 font-sans; */
