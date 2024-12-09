@@ -13,6 +13,7 @@ export default function Main() {
              <Chat /> */}
              <Playlist/>
              <SocialMediaList />
+            
                     </div>
         </>
     )
