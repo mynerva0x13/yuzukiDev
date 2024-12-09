@@ -88,14 +88,14 @@ const SocialMediaList = () => {
       {/* Decorative Footer */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
         <img src="/image/kanata-shinkai-ensemble-stars.gif" className="w-96 rounded-lg shadow-lg" />
-        <img src="/image/zero-zerodod3.gif" className="w-full rounded-lg shadow-lg w-96" />
+        <img src="/image/zero-zerodod3.gif" className="rounded-lg shadow-lg w-96" />
       </div>
       <div className="grid grid-cols-1 gap-4 mt-4">
         <img src="/image/grimoire-weiss-dies-from-cringe.gif" className="w-full rounded-lg shadow-lg" />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
         <img src="/image/vxgballibsh51.jpg" className="w-96 rounded-lg shadow-lg" />
-        <img src="/image/GWjpYWXaoAAQe_c.jpg" className="w-full rounded-lg shadow-lg w-96" />
+        <img src="/image/GWjpYWXaoAAQe_c.jpg" className="rounded-lg shadow-lg w-96" />
       </div>
     </>
   );
