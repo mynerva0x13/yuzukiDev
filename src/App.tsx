@@ -16,7 +16,6 @@ function App() {
 
       <Helmet>
         
-        <script src="https://unpkg.com/konva@9.3.16/konva.min.js" defer></script>
         <script src="/script/konva.js" defer ></script> {/* Adjusted script path */}
         <script src="/script/snow.js"></script> {/* Adjusted script path */}
       </Helmet>

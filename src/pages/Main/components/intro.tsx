@@ -1,11 +1,12 @@
 export default function Intro() {
     return (
-        <div className="mb-32 flex p-3">
+        <>
+        <div className="mb-10 flex p-3">
             <div className="container max-w-4xl mx-auto text-center">
                 <p className="text-4xl md:text-6xl text-white font-bold mb-8">
                     Welcome to Yuzuki's Cage
                 </p>
-                <div className="flex flex-col md:flex-row items-center md:space-x-8">
+                <div className="flex flex-col md:flex-row items-center ">
                     <img
                         id="profilePic"
                         src="https://cdn.bsky.app/img/avatar/plain/did:plc:djfqe5vhwjgzfa3lv6hsnapo/bafkreibhg7xamkn5letulafviy6kptp5a7crzr6nnaxxtzmfckwleedm24@jpeg"
@@ -21,5 +22,15 @@ export default function Intro() {
                 </div>
             </div>
         </div>
+        
+        <div className="w-[70%] h-52 sm:h-80 md:h-52 lg:h-[300px]">
+  <img
+    src="/image/mitsuru-tenma-enstars.gif"
+    alt="Mitsuru Tenma Enstars"
+    className="w-full h-full object-cover"
+  />
+</div>
+
+        </>
     );
 }

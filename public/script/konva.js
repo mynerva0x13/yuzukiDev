@@ -1,13 +1,22 @@
-const container = document.getElementById('container'); // Your container div
-const containerWidth = container.offsetWidth; // Get the container's width
-const containerHeight = container.offsetHeight; // Get the container's height and adjust
+const container = document.getElementById('container');
 
-// Initialize the Konva stage with the container's size
+// Dynamically set the stage size to fit the container
+const fitCanvasToContainer = () => {
+  const containerWidth = container.offsetWidth; // Actual container width
+  const containerHeight = container.offsetHeight; // Actual container height
+
+  stage.width(containerWidth);
+  stage.height(containerHeight);
+};
+
+// Initialize the stage
 const stage = new Konva.Stage({
-  container: 'container', // The ID of your container div
-  width: containerWidth,  // Use the container's width
-  height: containerHeight // Use the container's height
+  container: 'container',
+  width: container.offsetWidth,
+  height: container.offsetHeight,
 });
+
+window.addEventListener('resize', fitCanvasToContainer);
 
 var layer = new Konva.Layer();
 stage.add(layer);
@@ -77,23 +86,23 @@ stage.on('mousemove touchmove', function () {
   layer.batchDraw();
 });
 
-// var select = document.getElementById('tool');
-// select.addEventListener('change', function () {
-//   mode = select.value;
-// });
+var select = document.getElementById('tool');
+select.addEventListener('change', function () {
+  mode = select.value;
+});
 
-// // Change color based on input color picker
-// document.getElementById('color').addEventListener('input', function () {
-//   context.strokeStyle = this.value;
-// });
+// Change color based on input color picker
+document.getElementById('color').addEventListener('input', function () {
+  context.strokeStyle = this.value;
+});
 
-// // Change line width based on input number
-// document.getElementById('linewidth').addEventListener('input', function () {
-//   context.lineWidth = parseInt(this.value, 10);
-// });
+// Change line width based on input number
+document.getElementById('linewidth').addEventListener('input', function () {
+  context.lineWidth = parseInt(this.value, 10);
+});
 
-// // Reset the canvas drawing
-// document.getElementById('reset').addEventListener('click', function () {
-//   context.clearRect(0, 0, canvas2.width, canvas2.height); // Clear the drawing area
-//   layer.batchDraw(); // Redraw the layer
-// });
+// Reset the canvas drawing
+document.getElementById('reset').addEventListener('click', function () {
+  context.clearRect(0, 0, canvas2.width, canvas2.height); // Clear the drawing area
+  layer.batchDraw(); // Redraw the layer
+});
