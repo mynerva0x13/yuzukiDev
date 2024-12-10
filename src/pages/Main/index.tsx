@@ -9,8 +9,8 @@ export default function Main() {
         <div className=" mx-auto w-[90vw] flex flex-col items-center backdrop-blur-sm bg-white/10 z-50 space-y-10">
             
             <Intro />
-             {/* <Konva />  
-             <Chat /> */}
+             <Konva />  
+             {/* <Chat />  */}
              <Playlist/>
              <SocialMediaList />
             

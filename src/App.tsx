@@ -15,8 +15,6 @@ function App() {
       <div className="scraper2 scraper"></div> {/* Removed duplicate ID */}
 
       <Helmet>
-        
-        <script src="/script/konva.js" defer ></script> {/* Adjusted script path */}
         <script src="/script/snow.js"></script> {/* Adjusted script path */}
       </Helmet>
     </HelmetProvider>
